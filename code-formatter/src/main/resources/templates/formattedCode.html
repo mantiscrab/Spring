@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>FormattedCode</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<div>
+    <div class="container">
+        <h1>Wynik formatowania</h1>
+        <div class="result">
+            <div class="notFormattedCode">
+                <p>Kod przed formatowaniem</p>
+                <pre th:text="${notFormattedCode}">
+
+                </pre>
+            </div>
+            <div class="formattedCode">
+                <p>Kod zgodny z Google Java Styles</p>
+                <pre th:text="${formattedCode}">
+
+                </pre>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
