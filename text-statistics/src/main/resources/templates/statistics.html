@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TextStatistics - result</title>
+    <link href="../static/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Statystyki wprowadzonego tekstu</h1>
+    <div th:if="${textStatisticsDto}">
+        <p th:if="${textStatisticsDto.textLength!=null}">
+            Długość tekstu:
+            <span th:text="${textStatisticsDto.textLength}"></span>
+        </p>
+        <p th:if="${textStatisticsDto.wordsNumber!=null}">
+            Liczba słów:
+            <span th:text="${textStatisticsDto.wordsNumber}"></span>
+        </p>
+        <p th:if="${textStatisticsDto.isPalindrome}!=null">
+            <span th:if="${textStatisticsDto.isPalindrome}==true">Tekst jest palindromem</span>
+            <span th:if="${textStatisticsDto.isPalindrome}==false">Tekst nie jest palindromem</span>
+        </p>
+        <p th:if="${textStatisticsDto.mostFrequentWordFrequency!=null}">
+            Najpopularniejsze słowo to: <span th:text="${textStatisticsDto.mostFrequentWord}"></span>,
+            liczba wystąpień: <span th:text="${textStatisticsDto.mostFrequentWordFrequency}"></span>
+        </p>
+    </div>
+</div>
+</body>
+</html>

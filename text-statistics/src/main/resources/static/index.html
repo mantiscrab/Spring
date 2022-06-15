@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TextStatistics - form</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Statystyki tekstu</h1>
+    <form action="/stats" method="post">
+        <label for="text">Tekst, dla którego chcemy zobaczyć statystyki</label>
+        <textarea id="text" name="text" placeholder="Twój tekst..."></textarea>
+        <p>Które statystyki Cię interesują?</p>
+        <div>
+            <label for="text-length">Długość tekstu</label>
+            <input id="text-length" name="statistics" type="checkbox" value="text-length">
+        </div>
+        <div>
+            <label for="words-number">Liczba słów</label>
+            <input id="words-number" name="statistics" type="checkbox" value="words-number">
+        </div>
+        <div>
+            <label for="is-polindrome">Sprawdzenie czy tekst jest polindromem</label>
+            <input id="is-polindrome" name="statistics" type="checkbox" value="palindrome">
+        </div>
+        <div>
+            <label for="find-most-frequent-word">Znalezienie najpopularniejszego słowa</label>
+            <input id="find-most-frequent-word" name="statistics" type="checkbox" value="most-frequent-word">
+        </div>
+        <button type="submit">Sprawdź statystyki</button>
+    </form>
+</div>
+</body>
+</html>
